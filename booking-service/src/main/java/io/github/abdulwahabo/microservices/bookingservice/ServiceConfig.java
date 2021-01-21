@@ -8,7 +8,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 public class ServiceConfig {
 
     @Bean
-    private WebClient webClient() {
+    public WebClient webClient() {
         return WebClient.create();
     }
 }

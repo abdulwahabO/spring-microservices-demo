@@ -16,7 +16,7 @@ public class RouteConfig {
                       .route("flight_service_route",
                               p -> p.path("/flights").uri("http://flight-service"))
                       .route("booking_service_route",
-                              p -> p.path("/book").uri("http://booking-service"))
+                              p -> p.path("/book/**").uri("http://booking-service"))
                       .build();
     }
 }

@@ -24,7 +24,7 @@ public class BookingWebService {
     @PostMapping("/{flight_id}")
     public ResponseEntity<TicketDto> book(@PathVariable("flight_id") String flightId) {
         Optional<ResponseEntity<TicketDto>> ticketDto = webClient.post()
-                                                 .uri("http://ticket-sevice/" + flightId)
+                                                 .uri("http://ticket-service/ticket/create/" + flightId)
                                                  .retrieve()
                                                  .toEntity(TicketDto.class).blockOptional(Duration.ofMinutes(1));
 
